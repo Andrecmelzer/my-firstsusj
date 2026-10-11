@@ -10,25 +10,33 @@
             font-family: 'Segoe UI', Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
+            padding: 40px 20px;
         }
-        .card {
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .hero {
             background: white;
             border-radius: 20px;
-            padding: 50px 40px;
-            max-width: 500px;
+            padding: 60px 40px;
             text-align: center;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+        }
+        .hero img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 25px;
+            border: 4px solid #667eea;
         }
         h1 {
             color: #333;
             font-size: 2.5em;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
-        p {
+        .hero p {
             color: #666;
             font-size: 1.1em;
             line-height: 1.6;
@@ -48,13 +56,58 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
         }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .feature {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .feature .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        .feature h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Привет, мир! 👋</h1>
-        <p>Это мой первый сайт. Он уже выглядит круто, а дальше будет ещё лучше.</p>
-        <button onclick="alert('Сайт работает!')">Нажми меня</button>
+    <div class="container">
+        <div class="hero">
+            <img src="https://i.pravatar.cc/200?img=12" alt="Аватар">
+            <h1>Привет, мир! 👋</h1>
+            <p>Это мой первый сайт. Я учусь делать крутые вещи и скоро буду брать заказы.</p>
+            <button onclick="alert('Сайт работает!')">Связаться со мной</button>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <div class="icon">⚡</div>
+                <h3>Быстро</h3>
+                <p>Сайт загружается моментально и работает на любом устройстве.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🎨</div>
+                <h3>Красиво</h3>
+                <p>Современный дизайн, который приятно смотреть.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">📱</div>
+                <h3>Адаптивно</h3>
+                <p>Отлично выглядит и на телефоне, и на компьютере.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
